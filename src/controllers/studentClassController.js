@@ -5,9 +5,9 @@ import studentClassModel from '../models/studentClassModel';
 export default {
   updateStudentClass: async (req, res) => {
     const student = await studentModel.listOne(req.params.studentId);
-    if (!student) res.send({ error: 'Estudante não encontrado!' });
+    if (student.length === 0) res.send({ error: 'Estudante não encontrado!' });
     const schoolClass = await classModel.listOne(req.params.classId);
-    if (!schoolClass) res.send({ error: 'Classe não encontrada!' });
+    if (schoolClass.length === 0) res.send({ error: 'Classe não encontrada!' });
 
     const updated = await studentClassModel.updateStudentClass(
       req.params.studentId,
