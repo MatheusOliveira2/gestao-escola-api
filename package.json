@@ -1,0 +1,19 @@
+{
+  "name": "Gestao-Escola",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MatheusOliveira2/gestao-escola.git",
+  "author": "Matheus Oliveira <matheusalmeida.soliveira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.13",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sucrase": "^3.16.0"
+  }
+}
