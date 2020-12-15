@@ -5,9 +5,12 @@ const db = knex(config);
 
 export default {
   create: async (student) => {
-    const result = db('students')
+    return db('students')
       .insert(student)
       .then((ids) => ({ id: ids[0] }));
-    return result;
+  },
+
+  listAll: async () => {
+    return db('students');
   },
 };

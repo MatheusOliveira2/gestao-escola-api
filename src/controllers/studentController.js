@@ -12,4 +12,13 @@ export default {
       res.status(400).send(err);
     }
   },
+
+  listAll: async (_req, res) => {
+    try {
+      const students = await studentModel.listAll();
+      if (students) res.status(200).send(students);
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  },
 };
