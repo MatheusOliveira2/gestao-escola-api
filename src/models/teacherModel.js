@@ -4,17 +4,17 @@ import config from '../../knexfile';
 const db = knex(config);
 
 export default {
-  create: async (student) => {
-    return db('students')
-      .insert(student)
+  create: async (teacher) => {
+    return db('teacher')
+      .insert(teacher)
       .then((ids) => ({ id: ids[0] }));
   },
 
   listAll: async () => {
-    return db('students');
+    return db('teacher');
   },
 
   delete: async (id) => {
-    return db('students').delete(id);
+    return db('teacher').delete(id);
   },
 };

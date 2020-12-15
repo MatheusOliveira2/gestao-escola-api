@@ -1,8 +1,6 @@
 import studentModel from '../models/studentModel';
 
 export default {
-  listAll: () => {},
-
   create: async (req, res) => {
     const { name, age } = req.body;
     try {
@@ -17,6 +15,15 @@ export default {
     try {
       const students = await studentModel.listAll();
       if (students) res.status(200).send(students);
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  },
+
+  delete: async (req, res) => {
+    try {
+      const deleted = await studentModel.delete(req.params.id);
+      res.send(200).send(deleted);
     } catch (err) {
       res.status(400).send(err);
     }
