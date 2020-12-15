@@ -22,9 +22,13 @@ export default {
 
   listOne: async (req, res) => {
     try {
-      const schoolClasses = await classModel.listAll(req.params.id);
-      if (schoolClasses) res.status(200).send(schoolClasses);
+      const schoolClass = await classModel.listOne(req.params.id);
+      if (schoolClass[0]) res.status(200).send(schoolClass[0]);
+      else {
+        res.status(400).send('Não encontrado');
+      }
     } catch (err) {
+      console.log(err);
       res.status(400).send(err);
     }
   },
@@ -32,7 +36,10 @@ export default {
   delete: async (req, res) => {
     try {
       const deleted = await classModel.delete(req.params.id);
-      res.send(200).send(deleted);
+      if (deleted > 0) res.send(200).send();
+      else {
+        res.status(400).send('Não encontrado');
+      }
     } catch (err) {
       res.status(400).send(err);
     }
