@@ -20,10 +20,25 @@ export default {
     }
   },
 
+  listOne: async (req, res) => {
+    try {
+      const teacher = await teacherModel.listOne(req.params.id);
+      if (teacher[0]) res.status(200).send(teacher[0]);
+      else {
+        res.status(400).send('Não encontrado');
+      }
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  },
+
   delete: async (req, res) => {
     try {
       const deleted = await teacherModel.delete(req.params.id);
-      res.send(200).send(deleted);
+      if (deleted > 0) res.send(200).send();
+      else {
+        res.status(400).send('Não encontrado');
+      }
     } catch (err) {
       res.status(400).send(err);
     }

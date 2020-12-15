@@ -14,7 +14,11 @@ export default {
     return db('students');
   },
 
+  listOne: async (id) => {
+    return db('students').where({ id: id });
+  },
+
   delete: async (id) => {
-    return db('students').delete(id);
+    return db('students').where({ id: id }).del();
   },
 };
