@@ -28,7 +28,6 @@ export default {
         res.status(400).send('Não encontrado');
       }
     } catch (err) {
-      console.log(err);
       res.status(400).send(err);
     }
   },
