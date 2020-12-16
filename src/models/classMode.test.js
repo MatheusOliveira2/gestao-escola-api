@@ -9,7 +9,7 @@ describe('Model de turmas', () => {
     );
   });
 
-  it('Deve retornar um objeto da contendo id', async () => {
+  it('Deve retornar um objeto contendo id, name, created_at', async () => {
     expect(await classModel.listOne(2)).toEqual(
       expect.objectContaining([
         {
