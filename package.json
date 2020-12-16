@@ -5,6 +5,9 @@
   "repository": "https://github.com/MatheusOliveira2/gestao-escola.git",
   "author": "Matheus Oliveira <matheusalmeida.soliveira@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
