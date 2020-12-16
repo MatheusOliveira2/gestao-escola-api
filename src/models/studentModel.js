@@ -18,6 +18,13 @@ export default {
     return db('students').where({ id: id });
   },
 
+  listAllClass: async (classId) => {
+    const students = await db('students')
+      .where({ studentClass: classId })
+      .select('id', 'name');
+    return students;
+  },
+
   delete: async (id) => {
     return db('students').where({ id: id }).del();
   },

@@ -18,6 +18,10 @@ export default {
     return db('teacher').where({ id: id });
   },
 
+  listAllClass: async (classId) => {
+    return db('teacher').where({ teacherClass: classId }).select('id', 'name');
+  },
+
   delete: async (id) => {
     return db('teacher').where({ id: id }).del();
   },
