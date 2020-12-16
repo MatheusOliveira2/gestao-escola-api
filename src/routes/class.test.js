@@ -20,8 +20,13 @@ describe('Rotas das turmas', () => {
     );
   });
 
-  it('get(listAll das turmas, deve retornar um array)', async () => {
-    const res = await request(app).get('/class');
-    expect(res.body).toEqual(expect.objectContaining([]));
+  it('post(insert turma, deve retornar um objeto com id,name)', async () => {
+    const res = await request(app).post('/class').send({ name: 'turma 35' });
+    expect(res.body).toEqual(
+      expect.objectContaining({
+        id: expect.any(Number),
+        name: expect.any(String),
+      })
+    );
   });
 });

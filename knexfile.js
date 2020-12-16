@@ -2,7 +2,6 @@ require('dotenv').config({
   path: process.env.NODE_ENV === 'test' ? '.env.testing' : '.env',
 });
 
-console.log(process.env.DB_NAME);
 module.exports = {
   client: 'mysql',
   version: '5.8',
