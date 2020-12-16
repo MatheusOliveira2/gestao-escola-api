@@ -6,7 +6,9 @@
   "author": "Matheus Oliveira <matheusalmeida.soliveira@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "migrate-teste": "set NODE_ENV=test&&yarn knex migrate:latest",
+    "test-jest": "set NODE_ENV=test&&jest"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -16,6 +18,7 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "nodemon": "^2.0.6",
     "sucrase": "^3.16.0"
   }

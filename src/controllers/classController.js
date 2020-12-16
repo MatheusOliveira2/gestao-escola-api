@@ -45,7 +45,8 @@ export default {
         const studentsClass = await studentModel.listAllClass(req.params.id);
         if (studentsClass) schoolClass[0].students = studentsClass;
         const teacherClass = await teacherModel.listAllClass(req.params.id);
-        if (teacherClass) schoolClass[0].teacher = teacherClass[0];
+	if (teacherClass.length > 0) schoolClass[0].teacher = teacherClass[0];
+        else schoolClass[0].teacher = null;
         res.status(200).send(schoolClass[0]);
       } else {
         res.status(400).send('Não encontrado');
