@@ -17,9 +17,9 @@ $ cd gestao-escola-api
 $ yarn install
 
 # Crie um arquivo .env com os seguinte campos
-$DB_USER
-$DB_PASSWD
-$DB_NAME
+$ DB_USER
+$ DB_PASSWD
+$ DB_NAME
 
 # Execute as migrations
 $ yarn knex migrate:latest
