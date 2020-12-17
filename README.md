@@ -1,7 +1,7 @@
 <h1 align="center">Gestão Escolar</h1>
 
 ## Descrição do Projeto
-<p align="center">Uma API desenvolvida com o intuito de praticar conceitos aprendidos utilizando NODE, Express, MySql e Knex. O intuito da aplicação é gerenciar uma escola que possui turmas, professores e alunos. A API permite criar, buscar, listar, atualizar e deletar cada uma das entidades slém disso permitir matricular alunos nas turmas e adicionar professores como responsáveis das turmas.</p>
+<p align="center">Uma API desenvolvida com o intuito de praticar conceitos aprendidos utilizando NODE, Express, MySql, Knex e testes automatizados de unidade e de integração utilizando JEST. O intuito da aplicação é gerenciar uma escola que possui turmas, professores e alunos. A API permite criar, buscar, listar, atualizar e deletar cada uma das entidades slém disso permitir matricular alunos nas turmas e adicionar professores como responsáveis das turmas.</p>
 
 ## Requisitos
 $ Deve rodar um servidor mysql e deve ter a versão mais recente do NODE instalada, hoje 17/12/2020 a versão 14.15.2.
@@ -17,8 +17,8 @@ $ cd gestao-escola-api
 $ yarn install
 
 # Crie um arquivo .env com os seguinte campos
-$ DB_USER
-$ DB_PASSWD
+$ DB_USER <br/>
+$ DB_PASSWD <br/>
 $ DB_NAME
 
 # Execute as migrations
