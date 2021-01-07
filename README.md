@@ -29,7 +29,7 @@ $ yarn start
 
 # O servidor inciará na porta:3001 - acesse <http://localhost:3001> 
 
-### 🛠 Tecnologias
+## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
