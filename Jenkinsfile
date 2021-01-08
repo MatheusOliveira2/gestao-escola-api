@@ -1,7 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage('Sonar'){
+        stage ('Teste'){
+           sh 'echo foi'
+        }
+        stage ('Sonar'){
             enviroment{
                 scannerHome = tool 'SONAR_SCANNER'
             }
