@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                sh "========executing A========"
+                bat "========executing A========"
             }
         }
     }
