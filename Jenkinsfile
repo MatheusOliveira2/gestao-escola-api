@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                sh echo "========executing A========"
+                sh "========executing A========"
             }
         }
     }
