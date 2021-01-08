@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    
+    tools {nodejs "node"}
+    
     stages {
-        stage ('Teste') {
+        stage ('Install Dependencies') {
             steps{
-                sh 'echo foi'
+                sh 'yarn install'
             }
         }
         stage ('Sonar'){
