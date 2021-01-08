@@ -1,11 +1,13 @@
 pipeline{
     agent any
-    stages{
-        stage ('Teste'){
-           sh 'echo foi'
+    stages {
+        stage ('Teste') {
+            steps{
+                sh 'echo foi'
+            }
         }
         stage ('Sonar'){
-            enviroment{
+            environment{
                 scannerHome = tool 'SONAR_SCANNER'
             }
             steps{
@@ -16,4 +18,3 @@ pipeline{
         }
     }
 }
-    
